@@ -1,0 +1,27 @@
+$pc2: 1275px;
+@mixin pc2 {
+  @media (max-width: ($pc2)) {
+    @content;
+  }
+}
+
+$pc3: 1126px;
+@mixin pc3 {
+  @media (max-width: ($pc3)) {
+    @content;
+  }
+}
+
+$tab: 881px;
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+$sp: 599px;
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}

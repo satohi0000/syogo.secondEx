@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.u-mg {
+  margin-top: 111px;
+}
+.u-mg2 {
+  margin-top: 20px;
+}
+
+.u-mg3 {
+  margin-top: 28px;
+  margin-left: 42%;
+  @include tab {
+    margin-left: 0;
+  }
+  margin-bottom: 35px;
+}

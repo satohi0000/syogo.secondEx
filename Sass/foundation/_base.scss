@@ -1,0 +1,58 @@
+@use "../global" as *;
+
+body {
+  background-color: $background;
+  color: $black;
+  font-family: $ff1;
+  list-style: none;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  li {
+    @include f_style2(1.6, 19, 0);
+    font-weight: bold;
+    font-family: $ff1;
+  }
+  a {
+    color: $black;
+    cursor: pointer;
+  }
+  h1 {
+    @include f_style2(3.2, 54.4, 0);
+    font-weight: 700;
+  }
+  h2 {
+    @include f_style2(3.2, 54, 0);
+    font-weight: 600;
+  }
+  h3 {
+    @include f_style2(2.8, 48, 0);
+  }
+  h4 {
+    @include f_style2(2.4, 48, 0);
+    @include tab {
+      font-size: 2rem;
+    }
+  }
+
+  h5 {
+    @include f_style2(1.6, 31, 0);
+    color: $blue;
+  }
+  h6 {
+    @include f_style2(1.6, 27, 0);
+    color: $black;
+  }
+  label {
+    @include f_style2(1.6, 26, 0);
+  }
+  p {
+    @include f_style2(1.6, 32, 0);
+  }
+  dt,
+  dd {
+    @include f_style2(1.6, 97.6, 0);
+    font-weight: bold;
+  }
+}
