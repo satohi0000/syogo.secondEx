@@ -6,7 +6,7 @@
   width: 153px;
   height: 37px;
   color: $white;
-  background: linear-gradient(90deg, #fa41cc, #6020b0);
+  background: #978f10;
   padding: 7px 0px;
   text-align: center;
   white-space: nowrap;
@@ -15,6 +15,21 @@
   border: none;
   > a {
     color: $white;
+  }
+  &__contact {
+    background: #978f10;
+    display: flex;
+    width: 170px;
+    text-align: center;
+    padding: 16px 0;
+    > img {
+      width: 22px;
+      height: 22px;
+      margin: auto 0 auto 37px;
+    }
+    > a {
+      margin: auto 0 auto 10px;
+    }
   }
   &__form {
     text-align: center;
