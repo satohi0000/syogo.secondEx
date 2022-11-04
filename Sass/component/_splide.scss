@@ -2,25 +2,12 @@
 
 .splide {
   margin: 0 auto;
-
+  max-height: 1079px;
   &__pagination,
   &__arrow {
     display: none !important;
   }
   &__slide {
-    margin: 0 auto;
-    margin-top: 20px;
-    img {
-      height: 205px;
-      max-width: 530px;
-      border-radius: 20px 20px 0 0;
-    }
-    h6 {
-      margin: 23px 3px 18px 14px;
-    }
+    max-height: 1079px;
   }
-}
-
-.slider {
-  margin: 0 auto;
 }

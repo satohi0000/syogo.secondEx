@@ -3,24 +3,11 @@ new Splide(".splide", {
   interval: 5000,
   speed: 500,
   pauseOnFocus: false,
-  fixedWidth: "35%",
-  gap: "4%",
-  padding: "11%",
+  autoheight: "true",
   type: "loop",
-  width: "100%",
-  height: "400px",
+  heifht: "1029px",
   drag: "free",
   snap: true,
-
-  breakpoints: {
-    881: {
-      height: "auto",
-      fixedWidth: "90%",
-      padding: "15%",
-      focus: "center",
-      gap: "8%",
-    },
-  },
 }).mount();
 
 $("#c-BTN1").on("click", function () {
