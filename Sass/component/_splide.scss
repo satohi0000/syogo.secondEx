@@ -9,5 +9,9 @@
   }
   &__slide {
     max-height: 1079px;
+    img {
+      height: 100vh;
+      zoom: 50%;
+    }
   }
 }

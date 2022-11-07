@@ -2,7 +2,7 @@
 
 .l-footer {
   width: 100%;
-  padding: 35px 0 40px 0px;
+  padding: 35px 0 0px 0px;
   h2 {
     text-align: center;
     font-size: 2.4rem;
@@ -10,24 +10,48 @@
   }
 
   > p {
-    font-size: 1.4rem;
-    font-family: $ff1;
+    font-size: 1.2rem;
+
     text-align: center;
     line-height: 0.8;
     letter-spacing: 0.02em;
-    margin: 53px auto;
+    margin: 60px auto 0 auto;
   }
-
-  &__sentence {
-    display: flex;
-    justify-content: center;
-    margin-top: 13px;
-    p {
-      font-size: 1.6rem;
-      margin-left: 30px;
-      &:nth-of-type(2) {
-        margin-left: 32px;
+  &__menu {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0 auto;
+    li {
+      a {
+        font-size: 1.8rem;
       }
     }
+  }
+  &__logo {
+    width: 145px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  &__2colum {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    &:nth-of-type(1) {
+      margin-top: 72px;
+    }
+    &:nth-of-type(2) {
+      margin-top: 23px;
+    }
+    p {
+      margin-left: 20px;
+    }
+  }
+
+  &__under {
+    width: 100%;
+    text-align: center;
+    background-color: $black;
+    color: $white;
+    padding: 20px 0;
   }
 }

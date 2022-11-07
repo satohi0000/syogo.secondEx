@@ -10,10 +10,23 @@
   }
   @include sp {
   }
+  h6 {
+    position: absolute;
+    writing-mode: vertical-rl;
+    color: $white;
+    z-index: 20;
+    &:nth-of-type(1) {
+      margin: 15% 0 0 80%;
+    }
+
+    &:nth-of-type(2) {
+      margin: 15% 0 0 75%;
+    }
+  }
 
   &-right {
     position: relative;
-    width: 50%;
+    width: 97%;
 
     overflow: hidden;
     padding-left: 100px;

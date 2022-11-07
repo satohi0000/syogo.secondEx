@@ -3,12 +3,34 @@
 .p-article {
   margin: 49px 0 0 0;
   padding-bottom: 32px;
+  &1 {
+    background-image: url(../../画像/img/bg.jpg);
+    width: 100%;
+    padding-bottom: 80px;
 
+    &__text {
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+    h2 {
+      &:nth-of-type(1) {
+        margin-top: 65px;
+      }
+      &:nth-of-type(2) {
+        margin-top: 165px;
+        margin-right: 9%;
+      }
+    }
+    h3 {
+      margin-top: 443px;
+      margin-right: 24%;
+    }
+  }
   &__2colum {
     display: flex;
     justify-content: space-between;
-    margin-top: 47px;
-    margin-right: -9px;
+    margin-top: 106px;
     @include pc3 {
       margin-right: 0px;
     }
@@ -16,193 +38,136 @@
       flex-direction: column;
     }
     &-img {
-      width: 39%;
+      width: 55%;
       @include tab {
         width: 70%;
         margin: 0 auto;
         margin-top: 50px;
       }
     }
-    &-img2 {
-      width: 48%;
-      margin-left: 8%;
-      @include pc3 {
-        width: 45%;
-        margin-left: 0%;
-      }
-      @include tab {
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 50px;
+  }
+  &__section,
+  &__section2 {
+    p {
+      margin: 75px 0;
+    }
+  }
+
+  &__mark {
+    width: 40px;
+    margin: 0 50%;
+    transform: translateX(-50%);
+  }
+
+  &2 {
+    background-image: url(../../画像/img/bg02.jpg);
+    background-repeat: round;
+
+    margin-top: 92px;
+    padding: 46px 0 158px 0;
+    h1 {
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    h4 {
+      margin: 12px 0 32px 0;
+    }
+
+    &__3colum {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      margin-top: 65px;
+
+      li {
+        width: 33%;
+        margin-left: 2%;
+        img {
+          width: 88%;
+        }
       }
     }
-    &-img3 {
-      width: 41%;
-      margin-left: 2%;
-      @include tab {
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 50px;
+  }
+  &3 {
+    margin-top: 50px;
+    h1 {
+      text-align: center;
+    }
+    &__menu {
+      display: flex;
+      justify-content: center;
+      li {
+        margin-top: 45px;
+        &:nth-of-type(2) {
+          margin-left: 53px;
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      li {
+        background-color: #f6f6f6;
+        width: 48%;
+        margin-top: 49px;
+        display: flex;
+        padding: 15px 0;
+        img {
+          width: 100px;
+        }
+      }
+      &-right {
+        margin-left: 30px;
+        p {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+  &4 {
+    background-image: url(../../画像/img/bg.jpg);
+    margin-top: 60px;
+    padding: 60px 0 110px 0;
+    h1 {
+      text-align: center;
+    }
+  }
+  &__address {
+    &-2colum {
+      width: 100%;
+      display: flex;
+      margin-top: 50px;
+      height: 480px;
+      img {
+        width: 55%;
+      }
+    }
+    &-right {
+      margin-left: 5%;
+      h5,
+      p {
+        margin-top: 24px;
+      }
+      p {
+        width: 120%;
       }
     }
   }
   &__section {
     width: 46%;
+    margin-top: 20px;
+    margin-left: 8%;
+
     @include tab {
       width: 100%;
     }
-    margin-top: 41px;
 
-    h4,
-    p {
-      margin-left: 0px;
-    }
-    h4 {
-      width: 112%;
-      @include pc3 {
-        width: 100%;
-      }
-    }
-
-    p {
-      width: 90%;
-      margin-top: 36px;
-      font-weight: bold;
-      @include tab {
-        margin: 0 auto;
-        margin-top: 36px;
-      }
-      line-height: 1.7;
-    }
     &2 {
-      margin: 3px 0 0 10px;
-      p {
-        margin-top: 24px;
-        width: 450px;
-        @include tab {
-          width: 100%;
-        }
-        line-height: 1.7;
-      }
-    }
-
-    &3 {
-      width: 39%;
-      @include tab {
-        width: 100%;
-      }
-      margin-top: 19px;
-      p {
-        margin-top: 22px;
-        margin-left: 9px;
-        @include tab {
-          margin: 0 auto;
-          margin-top: 27px;
-        }
-        width: 345px;
-        line-height: 1.8;
-      }
-      h4 {
-        margin-left: 3px;
-      }
-    }
-  }
-  &__cell {
-    background-color: white;
-    width: 68%;
-    margin: 0 auto;
-    margin-top: 73px;
-    dl {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      box-shadow: 1px 1px 10px -2px rgba(0, 0, 0, 0.6);
-      dt {
-        width: 27%;
-
-        padding: 0px 2% 0% 2%;
-        border-right: 1px solid #e5e5e5;
-        border-bottom: 1px solid #e5e5e5;
-        @include pc2 {
-          width: 40%;
-        }
-        @include tab {
-          width: 100%;
-          padding: 0;
-          text-align: center;
-
-          font-size: 2.5rem;
-        }
-        @include sp {
-          font-size: 1.3rem;
-        }
-        &:nth-of-type(4) {
-          padding-bottom: 10px;
-        }
-      }
-      dd {
-        width: 64%;
-
-        padding: 0px 0px 0px 40px;
-        border-bottom: 1px solid #e5e5e5;
-        @include pc2 {
-          width: 47%;
-        }
-        @include tab {
-          width: 100%;
-          padding: 0;
-          text-align: center;
-          font-size: 2.4rem;
-        }
-        @include sp {
-          font-size: 1.3rem;
-        }
-
-        &:nth-of-type(4) {
-          padding-bottom: 10px;
-          border-bottom: none;
-        }
-      }
-    }
-    p {
-      font-weight: bold;
-      text-align: center;
-    }
-  }
-  &__table {
-    background-color: white;
-    width: 93%;
-    margin: 0 auto;
-    margin-top: 0px;
-    filter: drop-shadow(1px);
-
-    dl {
-      width: 100%;
-      margin: 0 auto;
-    }
-    dt,
-    dd {
-      @include f_style2(1.4, 26, 70);
-      text-align: center;
-      padding: 18px 35px 18px 35px;
-      margin: 0 auto;
-      border-bottom: 1px solid #e5e5e5;
-      border-left: 1px solid #e5e5e5;
-      border-right: 1px solid #e5e5e5;
-    }
-    dt {
-      cursor: pointer;
-      &:nth-of-type(1) {
-        border-top: 1px solid #e5e5e5;
-      }
-    }
-    dd {
-      display: none;
-      background-color: #f2f2f2;
-      text-align: start;
-      &:nth-of-type(1) {
-        display: block;
-      }
+      margin-left: 15%;
+      margin-top: 20px;
     }
   }
 }
