@@ -1,11 +1,11 @@
-$pc2: 1275px;
+$pc2: 1071px;
 @mixin pc2 {
   @media (max-width: ($pc2)) {
     @content;
   }
 }
 
-$pc3: 1126px;
+$pc3: 1400px;
 @mixin pc3 {
   @media (max-width: ($pc3)) {
     @content;

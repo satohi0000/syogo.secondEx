@@ -14,6 +14,7 @@ $("#c-BTN1").on("click", function () {
   $(this).toggleClass("active");
   $(".p-nav-list2").toggleClass("open");
   $(".p-mask").toggleClass("open1");
+  $(".p-fv h6").css("display", "none");
   $("body").toggleClass("no_scroll");
   $(".l-header").toggleClass("c-filter");
 

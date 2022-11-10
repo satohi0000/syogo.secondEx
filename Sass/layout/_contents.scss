@@ -5,6 +5,9 @@
     &-sentence {
       margin-top: 150px;
       margin-right: 20%;
+      @include pc2 {
+        margin-right: 10%;
+      }
     }
   }
 }

@@ -38,6 +38,9 @@
     width: 200px;
     text-align: center;
     padding: 20px 45px;
+    @include tab {
+      margin: 0 auto;
+    }
   }
   &__form {
     text-align: center;
@@ -55,20 +58,21 @@
   height: 50px;
   z-index: 98;
   cursor: pointer;
-  margin-top: 35px;
+  margin-top: 14px;
   margin-right: 5%;
+
   span {
     position: absolute;
     left: 7px;
     width: 36px;
-    height: 3px;
+    height: 7px;
     transition: all 0.4s;
-    background-color: $black;
+    background-color: $white;
     &:nth-of-type(2) {
-      top: 8px;
+      top: 12px;
     }
     &:nth-of-type(3) {
-      top: 17px;
+      top: 25px;
     }
   }
 }

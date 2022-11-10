@@ -27,9 +27,10 @@
     }
 
     &-right {
-      margin: 30px 22px 0 0;
       @include tab {
-        display: none;
+        display: flex;
+        width: 250px;
+        justify-content: space-between;
       }
     }
   }
