@@ -23,6 +23,10 @@
         margin-left: 2px;
         width: 200px;
         height: 40px;
+        @include sp {
+          width: 125px;
+          height: 25px;
+        }
       }
     }
 
@@ -38,6 +42,9 @@
     text-align: center;
     margin-left: 120px;
     margin-top: 16px;
+    @include sp {
+      margin-left: 0px;
+    }
   }
   &__connect {
     margin-top: 12px;

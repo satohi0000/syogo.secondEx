@@ -8,6 +8,12 @@
       @include pc2 {
         margin-right: 10%;
       }
+      @include sp {
+        margin-right: 3%;
+        margin-left: 20%;
+
+        margin-top: 25px;
+      }
     }
   }
 }

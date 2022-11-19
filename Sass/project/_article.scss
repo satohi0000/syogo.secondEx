@@ -12,16 +12,29 @@
       -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
       text-orientation: upright;
+      @include sp {
+        writing-mode: unset;
+      }
     }
     h2 {
+      @include sp {
+        margin-left: 4%;
+      }
       &:nth-of-type(1) {
         margin-top: 65px;
+        @include sp {
+          margin-top: 0;
+          padding-top: 70px;
+        }
       }
       &:nth-of-type(2) {
         margin-top: 165px;
         margin-right: 9%;
         @include pc2 {
           margin-right: 2%;
+        }
+        @include sp {
+          margin-top: 0;
         }
       }
     }
@@ -30,6 +43,10 @@
       margin-right: 24%;
       @include pc2 {
         margin-right: 2%;
+      }
+      @include sp {
+        margin-top: 20px;
+        text-align: end;
       }
     }
   }

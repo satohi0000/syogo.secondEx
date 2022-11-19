@@ -254,6 +254,13 @@ select {
     margin-right: 10%;
   }
 }
+@media (max-width: 599px) {
+  .l-contents__article-sentence {
+    margin-right: 3%;
+    margin-left: 20%;
+    margin-top: 25px;
+  }
+}
 
 .l-footer {
   width: 100%;
@@ -276,6 +283,9 @@ select {
   writing-mode: vertical-rl;
   text-orientation: upright;
   margin: 0 auto;
+}
+.l-footer__menu li {
+  margin-left: 15px;
 }
 .l-footer__menu li a {
   font-size: 1.8rem;
@@ -335,6 +345,12 @@ select {
   width: 200px;
   height: 40px;
 }
+@media (max-width: 599px) {
+  .l-header__inner-left img {
+    width: 125px;
+    height: 25px;
+  }
+}
 @media (max-width: 881px) {
   .l-header__inner-right {
     display: flex;
@@ -346,6 +362,11 @@ select {
   text-align: center;
   margin-left: 120px;
   margin-top: 16px;
+}
+@media (max-width: 599px) {
+  .l-header-nav {
+    margin-left: 0px;
+  }
 }
 .l-header__connect {
   margin-top: 12px;
@@ -404,8 +425,24 @@ select {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+@media (max-width: 599px) {
+  .p-article1__text {
+    writing-mode: unset;
+  }
+}
+@media (max-width: 599px) {
+  .p-article1 h2 {
+    margin-left: 4%;
+  }
+}
 .p-article1 h2:nth-of-type(1) {
   margin-top: 65px;
+}
+@media (max-width: 599px) {
+  .p-article1 h2:nth-of-type(1) {
+    margin-top: 0;
+    padding-top: 70px;
+  }
 }
 .p-article1 h2:nth-of-type(2) {
   margin-top: 165px;
@@ -416,6 +453,11 @@ select {
     margin-right: 2%;
   }
 }
+@media (max-width: 599px) {
+  .p-article1 h2:nth-of-type(2) {
+    margin-top: 0;
+  }
+}
 .p-article1 h3 {
   margin-top: 443px;
   margin-right: 24%;
@@ -423,6 +465,12 @@ select {
 @media (max-width: 1071px) {
   .p-article1 h3 {
     margin-right: 2%;
+  }
+}
+@media (max-width: 599px) {
+  .p-article1 h3 {
+    margin-top: 20px;
+    text-align: end;
   }
 }
 .p-article__2colum {
@@ -675,6 +723,11 @@ select {
   top: 20%;
   left: 70%;
 }
+@media (max-width: 881px) {
+  .p-fv h6:nth-of-type(1) {
+    left: 74%;
+  }
+}
 .p-fv h6:nth-of-type(2) {
   top: 20%;
   left: 65%;
@@ -863,10 +916,25 @@ select {
   text-align: center;
   padding: 16px 0;
 }
+@media (max-width: 599px) {
+  .c-button__contact {
+    width: 120px;
+  }
+}
+@media (max-width: 599px) {
+  .c-button__contact {
+    padding: 8px 0;
+  }
+}
 .c-button__contact > img {
   width: 22px;
   height: 22px;
   margin: auto 0 auto 37px;
+}
+@media (max-width: 599px) {
+  .c-button__contact > img {
+    margin: auto 0 auto 6px;
+  }
 }
 .c-button__contact > a {
   margin: auto 0 auto 10px;
@@ -904,6 +972,17 @@ select {
     display: flex;
   }
 }
+@media (max-width: 599px) {
+  .c-ham-btn {
+    height: 35px;
+  }
+}
+@media (max-width: 599px) {
+  .c-ham-btn {
+    margin-top: 5px;
+    margin-right: 0;
+  }
+}
 .c-ham-btn span {
   position: absolute;
   left: 7px;
@@ -911,6 +990,11 @@ select {
   height: 7px;
   transition: all 0.4s;
   background-color: #fff;
+}
+@media (max-width: 599px) {
+  .c-ham-btn span {
+    width: 30px;
+  }
 }
 .c-ham-btn span:nth-of-type(2) {
   top: 12px;
