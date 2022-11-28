@@ -3,7 +3,6 @@
 body {
   background-color: $background;
   color: $black;
-
   list-style: none;
   img {
     width: 100%;
@@ -37,6 +36,9 @@ body {
 
   label {
     @include f_style2(1.6, 26, 0);
+    @include sp {
+      font-size: 1.2rem;
+    }
   }
   p {
     @include f_style2(1.6, 32, 0);
@@ -46,8 +48,11 @@ body {
     @include f_style2(1.6, 97.6, 0);
     font-weight: bold;
   }
-
   font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
     "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E",
     "ＭＳ Ｐ明朝", "MS PMincho", "Noto Serif JP", serif;
+}
+
+.hidden {
+  overflow-x: hidden;
 }

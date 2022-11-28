@@ -4,4 +4,10 @@
   margin: 0 0 0 50%;
   transform: translateX(-55%);
   margin-top: 40px;
+  @include sp {
+    margin: 272px 0 0 4%;
+    transform: translateX(0);
+    width: 93%;
+    height: 300px;
+  }
 }

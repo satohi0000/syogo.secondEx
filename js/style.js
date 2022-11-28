@@ -14,27 +14,11 @@ $("#c-BTN1").on("click", function () {
   $(this).toggleClass("active");
   $(".p-nav-list2").toggleClass("open");
   $(".p-mask").toggleClass("open1");
-  $(".p-fv h6").css("display", "none");
-  $("body").toggleClass("no_scroll");
+  $(".p-fv h6").toggleClass("u-flex__no");
+  $("html").toggleClass("no_scroll");
   $(".l-header").toggleClass("c-filter");
 
   return false;
-});
-
-const CHANGE_WIDTH = 881; // 変更を検知する横幅
-const ADD_CLASS = "sp-change"; // 追加するクラス
-
-$(window).on("load resize", function () {
-  var i_width = $(window).outerWidth(true);
-  if (i_width > CHANGE_WIDTH) {
-    if ($(".p-nav-item").hasClass(ADD_CLASS)) {
-      $(".p-nav-item").removeClass(ADD_CLASS);
-    }
-  } else {
-    if (!$(".p-nav-item").hasClass(ADD_CLASS)) {
-      $(".p-nav-item").addClass(ADD_CLASS);
-    }
-  }
 });
 
 $(".p-nav-item2 a").on("click", function () {
@@ -43,29 +27,6 @@ $(".p-nav-item2 a").on("click", function () {
   $(".p-mask").toggleClass("open1");
   $("body").toggleClass("no_scroll");
   return false;
-});
-
-$(document).ready(function () {
-  $("#form").submit(function (event) {
-    var formData = $("#form").serialize();
-    $.ajax({
-      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc3fZ22K_5d25Tgthov3IFpBxaz2LyhrgQP17ph7E_zcafGCQ/formResponse",
-      data: formData,
-      type: "POST",
-      dataType: "xml",
-      statusCode: {
-        0: function () {
-          $(".c-form__end-message").slideDown();
-          $(".c-button").fadeOut();
-          //window.location.href = "thanks.html";
-        },
-        200: function () {
-          $(".c-form__false-message").slideDown();
-        },
-      },
-    });
-    event.preventDefault();
-  });
 });
 
 $(function () {
@@ -87,49 +48,47 @@ $(function () {
   });
 });
 
-$(".p-article__table-dt1").on("click", function () {
-  $(".p-article__table-dt1").next().slideToggle(1000);
-  return false;
-});
-$(".p-article__table-dt2").on("click", function () {
-  $(this).next().slideToggle(1000);
-  return false;
-});
-$(".p-article__table-dt3").on("click", function () {
-  $(this).next().slideToggle(1000);
+$("#menu1").on("click", function () {
+  $("#menu1").css("text-decoration", "underline");
+  $("#menu2").css("text-decoration", "none");
+  $(".p-article3__other").css("display", "none");
+  $(".p-article3__info").css("display", "flex");
   return false;
 });
 
-$(document).ready(function () {
-  const $submitBtn = $("#js-submit");
-  $("#form input,#form textarea").on("change", function () {
-    if (
-      $('#form input[type="text"]').val() !== "" &&
-      $('#form input[type="email"]').val() !== "" &&
-      $('#form input[type="checkbox"]').val() !== "" &&
-      $("#form #privacyCheck").prop("checked") === true
-    ) {
-      $submitBtn.prop("disabled", false);
-    } else {
-      $submitBtn.prop("disabled", true);
-    }
+$("#menu2").on("click", function () {
+  $("#menu2").css("text-decoration", "underline");
+  $("#menu1").css("text-decoration", "none");
+  $(".p-article3__other").css("display", "flex");
+  $(".p-article3__info").css("display", "none");
+  return false;
+});
+
+$(function () {
+  //is-showクラスのつけ外しだけでモーダル表示非表示できるようにしています
+  //アニメーションはcss側に記載しています
+  $("#openModal").on("click", function () {
+    $("#modalArea").toggleClass("is-show");
+    $("html").toggleClass("no_scroll");
+    $(".p-fv h6").toggleClass("u-flex__no");
+  });
+  $("#closeModal").on("click", function () {
+    $("#modalArea").toggleClass("is-show");
+    $("html").toggleClass("no_scroll");
+    $(".p-fv h6").toggleClass("u-flex__no");
+  });
+  $("#modalBg").on("click", function () {
+    $("#modalArea").toggleClass("is-show");
+    $("html").toggleClass("no_scroll");
+    $(".p-fv h6").toggleClass("u-flex__no");
   });
 });
 
-$("input[name='entry.752881277'").blur(function () {
-  if ($(this).val() == "") {
-    $(".c-form__error-message1").slideDown();
-  } else {
-    $(".c-form__error-message1").slideUp();
-  }
-});
-
-$("input[name='entry.1530546066'").blur(function () {
-  if ($(this).val() == "") {
-    $(".c-form__error-message2").slideDown();
-  } else {
-    $(".c-form__error-message2").slideUp();
-  }
+flatpickr("#calender", {
+  locale: "ja",
+  minDate: "today",
+  altFormat: "Y年n月j日",
+  dateFormat: "Y-m-d",
 });
 
 AOS.init({

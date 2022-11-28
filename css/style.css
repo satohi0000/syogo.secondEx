@@ -53,6 +53,11 @@ body label {
   line-height: 1.625;
   letter-spacing: 0em;
 }
+@media (max-width: 599px) {
+  body label {
+    font-size: 1.2rem;
+  }
+}
 body p {
   font-size: 1.6rem;
   line-height: 2;
@@ -66,8 +71,13 @@ body dd {
   font-weight: bold;
 }
 
+.hidden {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 62.5% !important;
+  overflow-x: hidden;
 }
 
 html,
@@ -257,7 +267,7 @@ select {
 @media (max-width: 599px) {
   .l-contents__article-sentence {
     margin-right: 3%;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-top: 25px;
   }
 }
@@ -327,11 +337,6 @@ select {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-}
-@media (max-width: 599px) {
-  .l-header__inner {
-    text-align: center;
-  }
 }
 .l-header__inner-left {
   display: flex;
@@ -518,6 +523,11 @@ select {
   margin: 0 auto;
   margin-top: 20px;
 }
+@media (max-width: 599px) {
+  .p-article2 h1 {
+    font-size: 3rem;
+  }
+}
 .p-article2 h4 {
   margin: 12px 0 32px 0;
 }
@@ -527,16 +537,38 @@ select {
   justify-content: center;
   margin-top: 65px;
 }
+@media (max-width: 599px) {
+  .p-article2__3colum {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+}
 .p-article2__3colum li {
   width: 33%;
   margin-left: 2%;
 }
+@media (max-width: 599px) {
+  .p-article2__3colum li {
+    width: 98%;
+    margin-top: 25%;
+  }
+}
 .p-article2__3colum li img {
   width: 88%;
+}
+@media (max-width: 599px) {
+  .p-article2__3colum li img {
+    width: 98%;
+  }
 }
 @media (max-width: 1071px) {
   .p-article2__3colum li br {
     display: none;
+  }
+}
+@media (max-width: 599px) {
+  .p-article2__3colum p {
+    width: 98%;
   }
 }
 .p-article3 {
@@ -551,31 +583,51 @@ select {
 }
 .p-article3__menu li {
   margin-top: 45px;
+  cursor: pointer;
+}
+.p-article3__menu li:nth-of-type(1) {
+  text-decoration: underline;
 }
 .p-article3__menu li:nth-of-type(2) {
   margin-left: 53px;
 }
-.p-article3__info {
-  display: flex;
+.p-article3__info, .p-article3__other {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
 }
-.p-article3__info li {
+@media (max-width: 599px) {
+  .p-article3__info, .p-article3__other {
+    margin-top: 30px;
+  }
+}
+.p-article3__info li, .p-article3__other li {
   background-color: #f6f6f6;
   width: 48%;
   margin-top: 49px;
   display: flex;
   padding: 15px 0;
 }
-.p-article3__info li img {
+@media (max-width: 599px) {
+  .p-article3__info li, .p-article3__other li {
+    width: 98%;
+    margin: 30px auto;
+  }
+}
+.p-article3__info li img, .p-article3__other li img {
   width: 100px;
 }
-.p-article3__info-right {
+.p-article3__info-right, .p-article3__other-right {
   margin-left: 30px;
 }
-.p-article3__info-right p {
+.p-article3__info-right p, .p-article3__other-right p {
   margin-right: 40px;
+}
+.p-article3__info {
+  display: flex;
+}
+.p-article3__other {
+  display: none;
 }
 .p-article4 {
   background-image: url(../../画像/img/bg.jpg);
@@ -591,8 +643,18 @@ select {
   margin-top: 50px;
   height: 480px;
 }
+@media (max-width: 599px) {
+  .p-article__address-2colum {
+    flex-direction: column;
+  }
+}
 .p-article__address-2colum img {
   width: 55%;
+}
+@media (max-width: 599px) {
+  .p-article__address-2colum img {
+    width: 100%;
+  }
 }
 .p-article__address-right {
   margin-left: 5%;
@@ -622,6 +684,11 @@ select {
     font-size: 2.8rem;
   }
 }
+@media (max-width: 599px) {
+  .p-article__section h1 {
+    font-size: 2.4rem;
+  }
+}
 @media (max-width: 1400px) {
   .p-article__section p br {
     display: none;
@@ -630,6 +697,11 @@ select {
 @media (max-width: 881px) {
   .p-article__section p br {
     display: flex;
+  }
+}
+@media (max-width: 599px) {
+  .p-article__section p {
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 1071px) {
@@ -717,7 +789,7 @@ select {
   writing-mode: vertical-rl;
   color: #fff;
   z-index: 20;
-  font-weight: bold;
+  font-weight: 600;
 }
 .p-fv h6:nth-of-type(1) {
   top: 20%;
@@ -725,7 +797,7 @@ select {
 }
 @media (max-width: 881px) {
   .p-fv h6:nth-of-type(1) {
-    left: 74%;
+    left: 78%;
   }
 }
 .p-fv h6:nth-of-type(2) {
@@ -906,39 +978,36 @@ select {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
   border: none;
 }
-.c-button > a {
-  color: #fff;
-}
 .c-button__contact {
   background: #978f10;
+  cursor: pointer;
+  color: #fff;
   display: flex;
   width: 170px;
+  font-size: 1.6rem;
   text-align: center;
   padding: 16px 0;
 }
 @media (max-width: 599px) {
   .c-button__contact {
-    width: 120px;
+    width: 100px;
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 599px) {
   .c-button__contact {
-    padding: 8px 0;
+    padding: 8px 5px;
   }
 }
 .c-button__contact > img {
   width: 22px;
   height: 22px;
-  margin: auto 0 auto 37px;
+  margin: auto 10px auto 37px;
 }
 @media (max-width: 599px) {
   .c-button__contact > img {
-    margin: auto 0 auto 6px;
+    margin: auto 10px auto 6px;
   }
-}
-.c-button__contact > a {
-  margin: auto 0 auto 10px;
-  color: white;
 }
 .c-button2 {
   font-size: 1.6rem;
@@ -950,6 +1019,7 @@ select {
 @media (max-width: 881px) {
   .c-button2 {
     margin: 0 auto;
+    padding: 20px 30px;
   }
 }
 .c-button__form {
@@ -1093,6 +1163,14 @@ select {
   transform: translateX(-55%);
   margin-top: 40px;
 }
+@media (max-width: 599px) {
+  .c-gmap {
+    margin: 272px 0 0 4%;
+    transform: translateX(0);
+    width: 93%;
+    height: 300px;
+  }
+}
 
 .splide {
   margin: 0 auto;
@@ -1149,6 +1227,94 @@ select {
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
+.modalArea {
+  visibility: hidden; /* displayではなくvisibility */
+  opacity: 0;
+  position: fixed;
+  z-index: 10; /* サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.modalContents h4 {
+  color: #000;
+  font-weight: 200;
+  text-align: center;
+  padding: 18px 0 26px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.modalContents label {
+  width: 100%;
+  margin-left: 5%;
+  display: block;
+  color: #000;
+}
+.modalContents input,
+.modalContents select {
+  height: 32px;
+  padding: 2px 10px;
+  display: block;
+  border: 1px solid #e7e7e7;
+  margin: 6px auto;
+}
+.modalContents input {
+  width: 85%;
+}
+.modalContents input:nth-of-type(4) {
+  background-color: #fff;
+  width: 50%;
+  margin: 65px auto;
+  height: 40px;
+  border: 1px solid #707070;
+}
+.modalContents select {
+  width: 90%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.is-show {
+  /* モーダル表示用クラス */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* モーダルCSSここまで */
+/* 以下ボタンスタイル */
+button {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 .u-flex_r {
   flex-direction: row-reverse;
 }
@@ -1160,6 +1326,10 @@ select {
 
 .u-flex_df {
   display: flex;
+}
+
+.u-flex__no {
+  display: none;
 }
 
 .u-mg {

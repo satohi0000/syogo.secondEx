@@ -7,6 +7,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css"
+      integrity="sha256-GzSkJVLJbxDk36qko2cnawOGiqz/Y8GsQv/jMTUrx1Q="
+      crossorigin="anonymous"
+    />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,7 +32,6 @@
       <div class="l-header__inner">
         <div class="l-header__inner-left">
           <img src="画像/img/top-header-logo.png" alt="top-header-logo" />
-
           <nav class="l-header-nav">
             <ul class="p-nav-list">
               <li class="p-nav-list-item1"><a href="#about">お部屋</a></li>
@@ -40,9 +46,9 @@
           </nav>
         </div>
         <div class="l-header__inner-right">
-          <li class="c-button__contact">
+          <li class="c-button__contact" id="openModal">
             <img src="画像/img/calender.png" alt="calender" />
-            <a href="html/contact.html">宿泊予約</a>
+            宿泊予約
           </li>
           <div id="c-BTN1" class="c-ham-btn">
             <span></span>
@@ -50,8 +56,64 @@
             <span></span>
           </div>
         </div>
-
         <div class="p-mask"></div>
+        <section id="modalArea" class="modalArea">
+          <div id="modalBg" class="modalBg"></div>
+          <div class="modalWrapper">
+            <div class="modalContents">
+              <h4>宿泊予約</h4>
+              <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScpTaDaJ24r0rbmgBYtnMFZnl_WTUtWyt4c-51OrTSbygTrIw/formResponse"
+              >
+                <label for="name" name="entry.478053331">お名前</label>
+                <input
+                  type="text"
+                  name="entry.478053331"
+                  id="name"
+                  placeholder="例：石井正悟"
+                />
+                <label for="email">メールアドレス</label>
+                <input
+                  type="email"
+                  name="entry.1756128907"
+                  id="email"
+                  placeholder="Example@example.com"
+                />
+                <label for="plan"
+                  >ご希望プラン（空いているプランのみ表示されます）</label
+                >
+                <select
+                  name="plan"
+                  id="plan"
+                  form="reserve"
+                  name="entry.615494420"
+                >
+                  <option value="plan0">プランを選択してください</option>
+                  <option value="plan1">
+                    【期間限定】海辺の四季旬彩、贅沢美味懐石プラン
+                  </option>
+                  <option value="plan2">
+                    平日に優雅に楽しむ、特別宿泊プラン
+                  </option>
+                  <option value="plan3">
+                    絶景貸切露天と個室会席を満喫できるファミリープラン
+                  </option>
+                </select>
+                <label for="date">日時選択</label>
+                <input
+                  id="calender"
+                  placeholder="日時を選択してください"
+                  tabindex="0"
+                  type="input"
+                  readonly="readonly"
+                  name="entry.152101716"
+                />
+                <input class="c-button2" type="submit" value="送信する" />
+              </form>
+              <div id="closeModal" class="closeModal">×</div>
+            </div>
+          </div>
+        </section>
       </div>
     </header>
     <main>
@@ -163,36 +225,26 @@
             <li>
               <img src="画像/img/recommended01.jpg" alt="recommended01" />
               <h4>
-                朝食付きプラン、日本近海で取れた<br />
-                のどぐろを朝食として…
+                朝食付きプラン、日本近海で取れた<br />のどぐろを朝食として…
               </h4>
               <p>
-                最高級と称されるのどぐろ、正式には「アカ<br />
-                ムツ」と呼ばれる魚、味は独特の上品な味わ<br />
-                いで、焼いても煮ても美味
+                最高級と称されるのどぐろ、正式には「アカ<br />ムツ」と呼ばれる魚、味は独特の上品な味わ<br />いで、焼いても煮ても美味
               </p>
             </li>
             <li>
               <img src="画像/img/recommended02.jpg" alt="recommended02" />
-              <h4>
-                【期間限定】熱海蟹をたっぷりと<br />
-                愉しむプラン。
-              </h4>
+              <h4>【期間限定】熱海蟹をたっぷりと<br />愉しむプラン。</h4>
               <p>
-                温海で水揚げされた蟹は「温海蟹」<br />
-                として知られ、嗜好品として愛されて<br />
-                きました。この宿泊プランでは存分に
+                温海で水揚げされた蟹は「温海蟹」<br />として知られ、嗜好品として愛されて<br />きました。この宿泊プランでは存分に
               </p>
             </li>
             <li>
               <img src="画像/img/recommended03.jpg" alt="recommended03" />
               <h4>
-                【平日限定】贅沢美味懐石プラン。<br />
-                海辺の四季旬彩プラン。
+                【平日限定】贅沢美味懐石プラン。<br />海辺の四季旬彩プラン。
               </h4>
               <p>
-                熱海近海で取れた魚を鮮度そのままに舟盛りに<br />
-                してご提供。生きた味をお楽しみください。
+                熱海近海で取れた魚を鮮度そのままに舟盛りに<br />してご提供。生きた味をお楽しみください。
               </p>
             </li>
           </ul>
@@ -202,8 +254,8 @@
           <img class="p-article__mark" src="画像/img/logo02.png" alt="logo02" />
           <h1>お知らせ</h1>
           <ul class="p-article3__menu">
-            <li>営業情報</li>
-            <li>その他</li>
+            <li id="menu1">営業情報</li>
+            <li id="menu2">その他</li>
           </ul>
           <ul class="p-article3__info f-wrapper">
             <li>
@@ -218,6 +270,55 @@
               <div class="p-article3__info-right">
                 <time>2020.12.24</time>
                 <p>年末最後の営業日のお知らせ</p>
+              </div>
+            </li>
+            <li>
+              <img src="画像/img/news02.jpg" alt="news02" />
+              <div class="p-article3__info-right">
+                <time>2020.12.11</time>
+                <p>
+                  12.21は臨時休業とさせていただきますので、よろしく
+                  お願いします。
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="画像/img/news01.jpg" alt="news01" />
+              <div class="p-article3__info-right">
+                <time>2020.12.24</time>
+                <p>年末最後の営業日のお知らせ</p>
+              </div>
+            </li>
+            <li>
+              <img src="画像/img/news01.jpg" alt="news01" />
+              <div class="p-article3__info-right">
+                <time>2020.12.01</time>
+                <p>
+                  和室の改装を行いますため、12.10はお休み<br />させていただきます。
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="画像/img/news02.jpg" alt="news02" />
+              <div class="p-article3__info-right">
+                <time>2020.12.24</time>
+                <p>年末最後の営業日のお知らせ</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="p-article3__other f-wrapper">
+            <li>
+              <img src="画像/img/news01.jpg" alt="news01" />
+              <div class="p-article3__info-right">
+                <time>2020.12.24</time>
+                <p>その他</p>
+              </div>
+            </li>
+            <li>
+              <img src="画像/img/news02.jpg" alt="news02" />
+              <div class="p-article3__info-right">
+                <time>2020.12.24</time>
+                <p>その他</p>
               </div>
             </li>
             <li>
@@ -314,8 +415,19 @@
       </div>
       <p class="l-footer__under">Copyright © 石井花壇 All Rights Reserved.</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"
+      integrity="sha256-Huqxy3eUcaCwqqk92RwusapTfWlvAasF6p2rxV6FJaE="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ja.js"
+      integrity="sha256-us400PA8+wpkgAkYwnKn7ueJbkk00UuwAcqrHqLGQJw="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/style.js"></script>
   </body>
