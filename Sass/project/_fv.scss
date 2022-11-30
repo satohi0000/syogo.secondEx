@@ -154,4 +154,17 @@
       }
     }
   }
+  &2 {
+    height: 500px;
+    position: relative;
+    img {
+      height: 100%;
+      position: absolute;
+    }
+    h6 {
+      position: absolute;
+      top: 47%;
+      left: 48%;
+    }
+  }
 }

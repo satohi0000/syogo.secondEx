@@ -69,6 +69,34 @@
         margin-top: 50px;
       }
     }
+    &2 {
+      display: flex;
+      justify-content: space-between;
+      margin: 106px;
+      width: 100%;
+      position: relative;
+      @include pc3 {
+        margin-right: 0px;
+      }
+      @include tab {
+        flex-direction: column;
+        text-align: center;
+      }
+      &-img {
+        width: 50%;
+        position: absolute;
+        @include tab {
+          width: 70%;
+          margin: 0 auto;
+          margin-top: 50px;
+        }
+      }
+      &-section {
+        position: absolute;
+        background: url(../../画像/img/bg.jpg);
+        width: 50%;
+      }
+    }
   }
   &__section,
   &__section2 {
@@ -183,6 +211,11 @@
         margin-left: 30px;
         p {
           margin-right: 40px;
+        }
+        br {
+          @include pc2 {
+            display: none;
+          }
         }
       }
     }

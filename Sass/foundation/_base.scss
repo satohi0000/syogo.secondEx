@@ -32,6 +32,10 @@ body {
   }
   h6 {
     @include f_style2(3.4, 42, 0);
+    color: $white;
+  }
+  h7 {
+    @include f_style2(2.4, 32, 0);
   }
 
   label {

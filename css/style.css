@@ -47,6 +47,12 @@ body h6 {
   font-size: 3.4rem;
   line-height: 1.2352941176;
   letter-spacing: 0em;
+  color: #fff;
+}
+body h7 {
+  font-size: 2.4rem;
+  line-height: 1.3333333333;
+  letter-spacing: 0em;
 }
 body label {
   font-size: 1.6rem;
@@ -416,6 +422,15 @@ select {
   }
 }
 
+.is-fixed {
+  position: fixed;
+  background-color: #333333;
+  height: 80px;
+  width: 100%;
+  transition: 0.3s;
+  z-index: 99;
+}
+
 .p-article {
   margin: 49px 0 0 0;
   padding-bottom: 32px;
@@ -503,6 +518,40 @@ select {
     margin: 0 auto;
     margin-top: 50px;
   }
+}
+.p-article__2colum2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 106px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .p-article__2colum2 {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 881px) {
+  .p-article__2colum2 {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.p-article__2colum2-img {
+  width: 50%;
+  position: absolute;
+}
+@media (max-width: 881px) {
+  .p-article__2colum2-img {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+.p-article__2colum2-section {
+  position: absolute;
+  background: url(../../画像/img/bg.jpg);
+  width: 50%;
 }
 .p-article__section p, .p-article__section2 p {
   margin: 75px 0;
@@ -622,6 +671,11 @@ select {
 }
 .p-article3__info-right p, .p-article3__other-right p {
   margin-right: 40px;
+}
+@media (max-width: 1071px) {
+  .p-article3__info-right br, .p-article3__other-right br {
+    display: none;
+  }
 }
 .p-article3__info {
   display: flex;
@@ -961,6 +1015,19 @@ select {
     margin-left: 13%;
   }
 }
+.p-fv2 {
+  height: 500px;
+  position: relative;
+}
+.p-fv2 img {
+  height: 100%;
+  position: absolute;
+}
+.p-fv2 h6 {
+  position: absolute;
+  top: 47%;
+  left: 48%;
+}
 
 .c-button {
   font-size: 1.4rem;
@@ -1294,7 +1361,8 @@ select {
 
 .closeModal {
   position: absolute;
-  top: 0.5rem;
+  width: 18px;
+  top: 1.5rem;
   right: 1rem;
   cursor: pointer;
 }
@@ -1313,6 +1381,10 @@ button {
   border: 1px solid #282828;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.c-position {
+  display: flex;
 }
 
 .u-flex_r {

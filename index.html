@@ -34,7 +34,9 @@
           <img src="画像/img/top-header-logo.png" alt="top-header-logo" />
           <nav class="l-header-nav">
             <ul class="p-nav-list">
-              <li class="p-nav-list-item1"><a href="#about">お部屋</a></li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page1.html">お部屋</a>
+              </li>
               <li class="p-nav-list-item1"><a href="#Service">お料理</a></li>
               <li class="p-nav-list-item1"><a href="#Works">温泉</a></li>
             </ul>
@@ -64,21 +66,26 @@
               <h4>宿泊予約</h4>
               <form
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScpTaDaJ24r0rbmgBYtnMFZnl_WTUtWyt4c-51OrTSbygTrIw/formResponse"
+                id="form"
               >
-                <label for="name" name="entry.478053331">お名前</label>
+                <label for="name">お名前</label>
                 <input
                   type="text"
                   name="entry.478053331"
                   id="name"
                   placeholder="例：石井正悟"
+                  required="required"
                 />
+
                 <label for="email">メールアドレス</label>
                 <input
                   type="email"
                   name="entry.1756128907"
                   id="email"
                   placeholder="Example@example.com"
+                  required="required"
                 />
+
                 <label for="plan"
                   >ご希望プラン（空いているプランのみ表示されます）</label
                 >
@@ -87,6 +94,7 @@
                   id="plan"
                   form="reserve"
                   name="entry.615494420"
+                  required="required"
                 >
                   <option value="plan0">プランを選択してください</option>
                   <option value="plan1">
@@ -107,10 +115,21 @@
                   type="input"
                   readonly="readonly"
                   name="entry.152101716"
+                  required="required"
                 />
-                <input class="c-button2" type="submit" value="送信する" />
+                <input
+                  class="c-button2"
+                  id="js-submit"
+                  type="submit"
+                  value="送信する"
+                />
               </form>
-              <div id="closeModal" class="closeModal">×</div>
+              <p class="c-form__end-message">
+                お問い合わせありがとうございました。２営業日以内に返信をさせていただきます。お待ちください。
+              </p>
+              <div id="closeModal" class="closeModal">
+                <img src="画像/img/close.jpg" alt="close" />
+              </div>
             </div>
           </div>
         </section>
@@ -398,12 +417,12 @@
     </main>
     <footer class="l-footer">
       <ul class="l-footer__menu">
-        <li><a href="">お　部　屋</a></li>
+        <li><a href="./html/page1.html">お　部　屋</a></li>
         <li><a href="">お　料　理</a></li>
         <li><a href="">温　泉</a></li>
       </ul>
       <div class="l-footer__logo">
-        <img src="画像/img/footer-logo.jpg" alt="logo02" />
+        <img src="画像/img/footer-logo.png" alt="logo02" />
       </div>
       <div class="l-footer__2colum">
         <p>〒000-0000</p>
