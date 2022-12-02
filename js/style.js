@@ -12,13 +12,13 @@ new Splide(".splide", {
 
 $(function () {
   var $win = $(window),
-    $fv = $(".p-fv"),
+    $fv = $(".p-fv" || ".p-fv2"),
     $header = $(".l-header");
   (fvHeight = $fv.outerHeight()), (fixedClass = "is-fixed");
 
   $win.on("load scroll", function () {
     var value = $(this).scrollTop();
-    if ($win.width() > 768)
+    if ($win.width() > 300)
       if (value > fvHeight) {
         $header.addClass(fixedClass);
       } else {
@@ -34,7 +34,6 @@ $("#c-BTN1").on("click", function () {
   $(".p-fv h6").toggleClass("u-flex__no");
   $("html").toggleClass("no_scroll");
   $(".l-header").toggleClass("c-filter");
-
   return false;
 });
 

@@ -69,10 +69,13 @@
         margin-top: 50px;
       }
     }
-    &2 {
+    &2,
+    &3 {
       display: flex;
       justify-content: space-between;
-      margin: 106px;
+      margin-top: 80px;
+
+      height: 540px;
       width: 100%;
       position: relative;
       @include pc3 {
@@ -83,8 +86,9 @@
         text-align: center;
       }
       &-img {
-        width: 50%;
+        width: 45%;
         position: absolute;
+        height: auto;
         @include tab {
           width: 70%;
           margin: 0 auto;
@@ -95,6 +99,36 @@
         position: absolute;
         background: url(../../画像/img/bg.jpg);
         width: 50%;
+
+        z-index: -1;
+        height: auto;
+        h7 {
+          margin: 50px;
+        }
+        p {
+          margin: 40px 0px 0px 50px;
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &2 {
+      &:nth-of-type(3) {
+        margin-bottom: 100px;
+      }
+      &-section {
+        top: 12%;
+        left: 27%;
+        padding: 60px 38px 110px 240px;
+      }
+    }
+    &3 {
+      &-img {
+        right: 0%;
+      }
+      &-section {
+        top: 12%;
+        left: 0%;
+        padding: 60px 240px 110px 38px;
       }
     }
   }
