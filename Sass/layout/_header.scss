@@ -82,11 +82,21 @@
   }
 }
 
-.is-fixed {
+.is-fixed,
+.is-fixed3 {
   position: fixed;
-  background-color: $black;
+
+  background-color: white;
   height: 80px;
+  @include sp {
+    height: 60px;
+  }
   width: 100%;
   transition: 0.3s;
   z-index: 99;
+}
+
+.is-fixed2,
+.is-fixed4 {
+  filter: invert(100%);
 }

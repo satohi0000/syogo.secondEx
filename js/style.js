@@ -1,32 +1,3 @@
-new Splide(".splide", {
-  autoplay: true,
-  interval: 5000,
-  speed: 500,
-  pauseOnFocus: false,
-  autoheight: "true",
-  type: "loop",
-  heifht: "1029px",
-  drag: "free",
-  snap: true,
-}).mount();
-
-$(function () {
-  var $win = $(window),
-    $fv = $(".p-fv" || ".p-fv2"),
-    $header = $(".l-header");
-  (fvHeight = $fv.outerHeight()), (fixedClass = "is-fixed");
-
-  $win.on("load scroll", function () {
-    var value = $(this).scrollTop();
-    if ($win.width() > 300)
-      if (value > fvHeight) {
-        $header.addClass(fixedClass);
-      } else {
-        $header.removeClass(fixedClass);
-      }
-  });
-});
-
 $("#c-BTN1").on("click", function () {
   $(this).toggleClass("active");
   $(".p-nav-list2").toggleClass("open");

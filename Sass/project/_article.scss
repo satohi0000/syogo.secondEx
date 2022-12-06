@@ -59,7 +59,6 @@
     }
     @include tab {
       flex-direction: column;
-      text-align: center;
     }
     &-img {
       width: 55%;
@@ -83,12 +82,18 @@
       }
       @include tab {
         flex-direction: column;
-        text-align: center;
+        br {
+          display: none;
+        }
       }
       &-img {
         width: 45%;
         position: absolute;
         height: auto;
+        @include pc4 {
+          width: 70%;
+          left: 15%;
+        }
         @include tab {
           width: 70%;
           margin: 0 auto;
@@ -99,15 +104,25 @@
         position: absolute;
         background: url(../../画像/img/bg.jpg);
         width: 50%;
-
         z-index: -1;
         height: auto;
         h7 {
           margin: 50px;
+          @include pc4 {
+            margin: 0;
+          }
+          @include sp {
+            font-size: 2rem;
+          }
         }
         p {
-          margin: 40px 0px 0px 50px;
           font-size: 1.4rem;
+          @include sp {
+            font-size: 1rem;
+          }
+          &:nth-of-type(1) {
+            margin: 40px 0 20px 0px;
+          }
         }
       }
     }
@@ -119,16 +134,40 @@
         top: 12%;
         left: 27%;
         padding: 60px 38px 110px 240px;
+        @include pc4 {
+          top: 40%;
+          left: 15%;
+          padding: 28% 10% 10% 10%;
+        }
+        @include sp {
+          top: 28%;
+          left: 15%;
+          padding: 25% 10% 25% 10%;
+        }
       }
     }
     &3 {
+      @include pc4 {
+        margin-top: 350px;
+      }
+      @include sp {
+        margin-top: 150px;
+      }
       &-img {
         right: 0%;
+        @include pc4 {
+          right: 15%;
+        }
       }
       &-section {
         top: 12%;
         left: 0%;
         padding: 60px 240px 110px 38px;
+        @include pc4 {
+          top: 28%;
+          left: 15%;
+          padding: 25% 10% 25% 10%;
+        }
       }
     }
   }
