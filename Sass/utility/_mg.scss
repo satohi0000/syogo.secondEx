@@ -1,9 +1,12 @@
 @use "../global" as *;
 
 .u-mg {
-  margin: 380px 0;
+  margin: 150px 0;
+  @include pc4 {
+    margin: 370px 0;
+  }
   @include sp {
-    margin: 200px 0;
+    margin: 120px 0;
   }
 }
 .u-mg2 {

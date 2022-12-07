@@ -31,25 +31,40 @@
     <header class="l-header">
       <div class="l-header__inner">
         <div class="l-header__inner-left">
-          <img src="../画像/img/top-header-logo.png" alt="top-header-logo" />
+          <a href="index.html">
+            <img
+              src="画像/img/top-header-logo.png"
+              alt="top-header-logo"
+              class="header-logo"
+          /></a>
           <nav class="l-header-nav">
             <ul class="p-nav-list">
-              <li><a href="./html/page1.html">お部屋</a></li>
-              <li class="p-nav-list-item1"><a href="#Service">お料理</a></li>
-              <li class="p-nav-list-item1"><a href="#Works">温泉</a></li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page1.html">お部屋</a>
+              </li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page2.html">お料理</a>
+              </li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page3.html">温泉</a>
+              </li>
             </ul>
             <ul class="p-nav-list2">
               <li class="p-nav-list-item1">
                 <a href="./html/page1.html">お部屋</a>
               </li>
-              <li class="p-nav-list-item1"><a href="#Service">お料理</a></li>
-              <li class="p-nav-list-item1"><a href="#Works">温泉</a></li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page2.html">お料理</a>
+              </li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page3.html">温泉</a>
+              </li>
             </ul>
           </nav>
         </div>
         <div class="l-header__inner-right">
           <li class="c-button__contact" id="openModal">
-            <img src="../画像/img/calender.png" alt="calender" />
+            <img src="画像/img/calender.png" alt="calender" />
             宿泊予約
           </li>
           <div id="c-BTN1" class="c-ham-btn">
@@ -137,70 +152,67 @@
     </header>
     <main>
       <div class="p-fv2">
-        <img src="../画像/img/oheya-header.jpg" alt="oheya-header" />
-        <h6>お部屋</h6>
+        <img src="../画像/img/menu-header.jpg" alt="oheya-header" />
+        <h6>お料理</h6>
       </div>
       <div class="l-contents f-wrapper">
-        <div class="c-position">
-          <p>トップ</p>
-          <p>></p>
-          <p>お部屋</p>
-        </div>
+        <ul class="breadcrumb">
+          <li
+            class="breadcrumb-item"
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="https://schema.org/ListItem"
+          >
+            <a itemprop="item" href="../index.html"
+              ><span itemprop="name">トップ</span></a
+            >
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item">
+            <p>&gt;<span>お料理</span></p>
+          </li>
+        </ul>
         <p class="u-center">
-          創業より受け継がれてきた石井花壇の和の造り<br />
-          温海の雄大な絶景を堪能していただけるように設計された客室<br />
-          ゆるやかに流れ行く時間に身を委ねて
+          地元熱海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br />大将の技が光る「熱海料理」<br />四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。<br />
         </p>
         <div class="p-article__2colum2">
           <img
             class="p-article__2colum2-img"
-            src="/画像/img/oheya01.jpg"
+            src="/画像/img/menu01.jpg"
             alt="menber"
+            data-aos="fade-right"
           />
-          <article class="p-article__2colum2-section">
-            <h7>温泉付き客室</h7>
+          <article class="p-article__2colum2-section" data-aos="fade-left">
+            <h7>地元食材にこだわった会席料理</h7>
             <p>
-              温海の源泉かけ流し露天風呂付き客室になります。<br />
-              あなただけの上質な安らぎのひとときを。
-            </p>
-            <p>
-              ＊部屋数に限りがございます。<br />
-              ＊洗い場はないため、お体を先に大浴場でお流しになって頂く必要があります。
+              みずみずしくほのかに甘い野菜、新鮮で味に深みがある魚介類、肉類。<br />旬の素材をそのままに生かす、経験に裏打ちされた確かな技。<br />四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。
             </p>
           </article>
         </div>
         <div class="p-article__2colum3">
           <img
             class="p-article__2colum3-img"
-            src="/画像/img/oheya01.jpg"
+            src="/画像/img/menu02.jpg"
             alt="menber"
           />
           <article class="p-article__2colum3-section">
-            <h7>庭園付き客室</h7>
+            <h7>熱海の漁港で目利きの品を</h7>
             <p>
-              庭園付きの客室になります。<br />
-              お庭を見ながら、ほっとするひとときをお過ごしください。
-            </p>
-            <p>
-              ＊お庭は複数のお客様と囲む形になります。<br />
-              ＊部屋数に限りがあります。<br />
-              ＊ご希望の方は「お抹茶/500円」をルームサービスさせていただきます。
+              石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br />熱海の魚市場でその日のうちに仕入れたものを使用しております。<br />日本海の宝玉を十分にお楽しみください。
             </p>
           </article>
         </div>
         <div class="p-article__2colum2 u-mg">
           <img
             class="p-article__2colum2-img"
-            src="/画像/img/oheya01.jpg"
+            src="/画像/img/menu03.jpg"
             alt="menber"
           />
           <article class="p-article__2colum2-section">
-            <h7>一般客室</h7>
+            <h7>食材が一流、職人も一流</h7>
             <p>
-              最もベーシックな客室になります。伝統の中にモダンさを取り入れた<br />
-              内装となっており、とても過ごしやすくしていただけます。
+              石井花壇の料理人は料亭で20年経験を積んだものばかり。<br />その時の最も旬な食材を、最高の調理でお届けします。<br />また、お料理への細かいご要望にもお答えできますので、<br />お気軽にお申し付けください。
             </p>
-            <p>＊＊全室お部屋より日本海を望むことができます。</p>
           </article>
         </div>
       </div>
@@ -212,7 +224,9 @@
         <li><a href="">温　泉</a></li>
       </ul>
       <div class="l-footer__logo">
-        <img src="../画像/img/footer-logo.png" alt="logo02" />
+        <a href="../index.html">
+          <img src="../画像/img/footer-logo.png" alt="logo02" />
+        </a>
       </div>
       <div class="l-footer__2colum">
         <p>〒000-0000</p>
@@ -238,6 +252,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/sticky-header__page.js"></script>
     <script src="../js/style.js"></script>
   </body>
 </html>

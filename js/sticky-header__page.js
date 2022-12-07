@@ -10,12 +10,12 @@ $(function () {
     if ($win2.width() > 300)
       if (value > fvHeight2) {
         $header2.addClass(fixedClass2);
-        $(".l-header__inner-left").children("img").addClass(changeColor2);
+        $(".header-logo").addClass(changeColor2);
         $(".p-nav-list").children("li").addClass(changeColor2);
         $(".c-ham-btn").addClass(changeColor2);
       } else {
         $header2.removeClass(fixedClass2);
-        $(".l-header__inner-left").children("img").removeClass(changeColor2);
+        $(".header-logo").addClass(changeColor2);
         $(".p-nav-list").children("li").removeClass(changeColor2);
         $(".c-ham-btn").removeClass(changeColor2);
       }

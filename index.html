@@ -2,7 +2,7 @@
 <html lang="ja" dir="ltl">
   <head>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="画像/img/Logo.png" id="favicon" />
+    <link rel="icon" href="画像/img/logo01.png" id="favicon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
@@ -31,19 +31,35 @@
     <header class="l-header">
       <div class="l-header__inner">
         <div class="l-header__inner-left">
-          <img src="画像/img/top-header-logo.png" alt="top-header-logo" />
+          <a href="index.html">
+            <img
+              src="画像/img/top-header-logo.png"
+              alt="top-header-logo"
+              class="header-logo"
+          /></a>
+
           <nav class="l-header-nav">
             <ul class="p-nav-list">
               <li class="p-nav-list-item1">
                 <a href="./html/page1.html">お部屋</a>
               </li>
-              <li class="p-nav-list-item1"><a href="#Service">お料理</a></li>
-              <li class="p-nav-list-item1"><a href="#Works">温泉</a></li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page2.html">お料理</a>
+              </li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page3.html">温泉</a>
+              </li>
             </ul>
             <ul class="p-nav-list2">
-              <li class="p-nav-list-item1"><a href="#about">お部屋</a></li>
-              <li class="p-nav-list-item1"><a href="#Service">お料理</a></li>
-              <li class="p-nav-list-item1"><a href="#Works">温泉</a></li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page1.html">お部屋</a>
+              </li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page2.html">お料理</a>
+              </li>
+              <li class="p-nav-list-item1">
+                <a href="./html/page3.html">温泉</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -137,7 +153,7 @@
     </header>
     <main>
       <div class="l-contents">
-        <div class="p-fv">
+        <div class="p-fv" data-aos="fade-in">
           <h6>頑張る人の</h6>
           <h6>頑張らない時間</h6>
           <div class="splide">
@@ -157,7 +173,7 @@
           </div>
         </div>
         <div class="p-article1">
-          <article class="p-article1__text f-wrapper">
+          <article class="p-article1__text f-wrapper" data-aos="fade-up">
             <h2>温海温泉の</h2>
             <h2>美しさに癒やされて</h2>
             <div class="l-contents__article-sentence">
@@ -178,14 +194,14 @@
             <h3>石井花壇</h3>
           </article>
         </div>
-
         <div class="p-article__2colum">
           <img
             class="p-article__2colum-img"
             src="/画像/img/oheya-top.jpg"
             alt="menber"
+            data-aos="fade-in"
           />
-          <article class="p-article__section">
+          <article class="p-article__section" data-aos="fade-up">
             <h1>
               喧騒から離れた空間<br />
               心落ち着く至極のひととき
@@ -203,8 +219,9 @@
             class="p-article__2colum-img"
             src="/画像/img/menu-top.jpg"
             alt="menber"
+            data-aos="fade-in"
           />
-          <div class="p-article__section2">
+          <div class="p-article__section2" data-aos="fade-up">
             <h1>
               出迎えるのは<br />
               極上の温海料理
@@ -223,8 +240,9 @@
             class="p-article__2colum-img"
             src="/画像/img/oheya-top.jpg"
             alt="menber"
+            data-aos="fade-in"
           />
-          <article class="p-article__section">
+          <article class="p-article__section" data-aos="fade-up">
             <h1>
               疲れ切った身体にやすらぎを<br />
               温海の源泉に癒やされて
@@ -237,7 +255,7 @@
             <div class="c-button2">温泉について</div>
           </article>
         </div>
-        <div class="p-article2">
+        <div class="p-article2" data-aos="fade-up">
           <img class="p-article__mark" src="画像/img/logo02.png" alt="logo02" />
           <h1>おすすめご宿泊プラン</h1>
           <ul class="p-article2__3colum f-wrapper">
@@ -268,15 +286,14 @@
             </li>
           </ul>
         </div>
-
         <article class="p-article3">
           <img class="p-article__mark" src="画像/img/logo02.png" alt="logo02" />
-          <h1>お知らせ</h1>
-          <ul class="p-article3__menu">
+          <h1 data-aos="fade-up">お知らせ</h1>
+          <ul data-aos="fade-up" class="p-article3__menu">
             <li id="menu1">営業情報</li>
             <li id="menu2">その他</li>
           </ul>
-          <ul class="p-article3__info f-wrapper">
+          <ul class="p-article3__info f-wrapper" data-aos="fade-up">
             <li>
               <img src="画像/img/news01.jpg" alt="news01" />
               <div class="p-article3__info-right">
@@ -325,7 +342,7 @@
               </div>
             </li>
           </ul>
-          <ul class="p-article3__other f-wrapper">
+          <ul class="p-article3__other f-wrapper" data-aos="fade-up">
             <li>
               <img src="画像/img/news01.jpg" alt="news01" />
               <div class="p-article3__info-right">
@@ -384,8 +401,13 @@
           <h1>アクセス</h1>
           <div class="p-article__address f-wrapper">
             <div class="p-article__address-2colum">
-              <img src="画像/img/acess.jpg" alt="acess" />
-              <div class="p-article__address-right">
+              <img
+                src="画像/img/acess.jpg"
+                alt="acess"
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+              />
+              <div class="p-article__address-right" data-aos="fade-up">
                 <h5>住所</h5>
                 <p>
                   〒000-0000 <br />
@@ -418,11 +440,13 @@
     <footer class="l-footer">
       <ul class="l-footer__menu">
         <li><a href="./html/page1.html">お　部　屋</a></li>
-        <li><a href="">お　料　理</a></li>
-        <li><a href="">温　泉</a></li>
+        <li><a href="./html/page2.html">お　料　理</a></li>
+        <li><a href="./html/page3.html">温　泉</a></li>
       </ul>
       <div class="l-footer__logo">
-        <img src="画像/img/footer-logo.png" alt="logo02" />
+        <a href="index.html">
+          <img src="../画像/img/footer-logo.png" alt="logo02" />
+        </a>
       </div>
       <div class="l-footer__2colum">
         <p>〒000-0000</p>

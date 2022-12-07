@@ -111,15 +111,14 @@ $(document).ready(function () {
 flatpickr("#calender", {
   locale: "ja",
   minDate: "today",
+  mode: "multiple",
   altFormat: "Y年n月j日",
   dateFormat: "Y-m-d",
 });
 
 AOS.init({
-  offset: 300,
+  offset: 100,
+  duration: 1000,
+  easing: "ease-in-sine",
   delay: 100,
-  duration: 600,
-  easing: "ease-out",
-  anchorPlacement: "bottom-top",
-  once: false,
 });
