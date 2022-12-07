@@ -15,7 +15,7 @@ $(function () {
         $(".c-ham-btn").addClass(changeColor2);
       } else {
         $header2.removeClass(fixedClass2);
-        $(".header-logo").addClass(changeColor2);
+        $(".header-logo").removeClass(changeColor2);
         $(".p-nav-list").children("li").removeClass(changeColor2);
         $(".c-ham-btn").removeClass(changeColor2);
       }
