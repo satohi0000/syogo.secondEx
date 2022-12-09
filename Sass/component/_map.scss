@@ -1,9 +1,8 @@
 @use "../global" as *;
 
 .c-gmap {
-  margin: 0 0 0 50%;
-  transform: translateX(-55%);
   margin-top: 40px;
+  margin-left: 17%;
   @include sp {
     margin: 272px 0 0 4%;
     transform: translateX(0);

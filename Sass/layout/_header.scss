@@ -9,10 +9,11 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
 
     &-left {
       display: flex;
+      margin-right: 7px;
       a {
         color: $white;
       }
