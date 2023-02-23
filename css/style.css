@@ -448,7 +448,7 @@ select {
 }
 @media (max-width: 599px) {
   .is-fixed,
-.is-fixed3 {
+  .is-fixed3 {
     height: 60px;
   }
 }
@@ -510,7 +510,7 @@ select {
 }
 .p-article1 h3 {
   letter-spacing: 1.4rem;
-  margin-top: 550px;
+  text-align: end;
   margin-right: 24%;
 }
 @media (max-width: 1071px) {
@@ -1178,16 +1178,16 @@ select {
 }
 @media (max-width: 881px) {
   .p-fv-left h1,
-.p-fv-left p,
-.p-fv-left button {
+  .p-fv-left p,
+  .p-fv-left button {
     margin-left: 28.5%;
     width: 53%;
   }
 }
 @media (max-width: 599px) {
   .p-fv-left h1,
-.p-fv-left p,
-.p-fv-left button {
+  .p-fv-left p,
+  .p-fv-left button {
     margin: 0 auto;
     width: 73%;
   }
